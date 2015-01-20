@@ -17,9 +17,9 @@ floop <- function(x,y=NULL,n=1,m=1,times="equal",period=NULL,subjects=NULL, subs
   if (!is.null(subjects)) {
     dat <- cbind("x"=dat$x,"y"=dat$y)
     if (is.numeric(times))
-      ans <- by(cbind(dat,times),subjects,floop,m=m,n=n,period=period,na.action=na.action,extended.classical=extended.classical)
+      ans <- by(cbind(dat,times),subjects,floop,n=n,m=m,period=period,na.action=na.action,extended.classical=extended.classical)
     else
-      ans <- by(dat,subjects,floop,m=m,n=n,period=period,times=times,na.action=na.action,extended.classical=extended.classical)
+      ans <- by(dat,subjects,floop,n=n,m=m,period=period,times=times,na.action=na.action,extended.classical=extended.classical)
     if (!is.list(subjects)) names(ans) <- levels(subjects)
     
     values <- t(sapply(ans,function (x) x["values"]$values))
