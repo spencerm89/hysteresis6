@@ -23,9 +23,9 @@ saturation point x coordinate. Horizontal distance from the center to the maximu
 }
   \item{b.y}{
 saturation point y coordinate. Vertical distance from the center to the point where the input is at its maximum.
-}
-  \item{phase.angle}{
-defines the starting point of the loop. The initial angle of the input function at its origin.
+} 
+  \item{retention}{
+split point, representing vertical distance from center to upper loop trajectory. It is the intersection of the loop and the output axis characterizing the distortion in the response at the average input challenge.
 }
   \item{cx}{
 center of input x.
@@ -33,8 +33,8 @@ center of input x.
   \item{cy}{
 center of output y.
 }
-  \item{retention}{
-split point, representing vertical distance from center to upper loop trajectory. It is the intersection of the loop and the output axis characterizing the distortion in the response at the average input challenge.
+  \item{phase.angle}{
+defines the starting point of the loop. The initial angle of the input function at its origin.
 }
 Derived Hysteresis Parameters
   \item{coercion}{
