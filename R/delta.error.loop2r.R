@@ -48,10 +48,10 @@ else splitSE <- NA
   form <- sprintf("~(%f * (x5+x7/2)* atan(x3/x2))/2",leftpart)
   areaSE <-   deltamethod(as.formula(form),c(z$coefficients,z2$coefficients), cov.matrix)
 
-  SEs<- list("n"=NA,"m"=NA,"b.x"=b.xSE,"b.y"=se2[3],"phase.angle"=phase.angleSE,
-             "cx"=se1[1],"cy"=se2[1],"retention.above"=retention.aboveSE,"retention.below"=se2[2],"coercion.above"=coercion.aboveSE,"coercion.below"=coercion.belowSE,
-             "area"=areaSE,"lag.above"=lag.aboveSE,"lag.below"=lag.belowSE, "split.angle"=splitSE,"hysteresis.x.above"=hysteresis.x.aboveSE,
-             "hysteresis.x.below"=hysteresis.x.belowSE,"hysteresis.y.above"=hysteresis.y.aboveSE,"hysteresis.y.below"=hysteresis.y.belowSE)
+  SEs<- list("n"=NA,"m"=NA,"b.x"=b.xSE,"b.y"=se2[3],
+             "retention.above"=retention.aboveSE,"retention.below"=se2[2],"coercion.above"=coercion.aboveSE,"coercion.below"=coercion.belowSE,
+             "lag.above"=lag.aboveSE,"lag.below"=lag.belowSE,"area"=areaSE,"phase.angle"=phase.angleSE, "split.angle"=splitSE,"hysteresis.x.above"=hysteresis.x.aboveSE,
+             "hysteresis.x.below"=hysteresis.x.belowSE,"hysteresis.y.above"=hysteresis.y.aboveSE,"hysteresis.y.below"=hysteresis.y.belowSE,"cx"=se1[1],"cy"=se2[1])
   }
   else {
     n <- length(g$x) 
@@ -70,11 +70,11 @@ else splitSE <- NA
     hysteresis.y.belowSE <- deltamethod(~x8/x4,coefs,vmat2)
     lag.aboveSE <- deltamethod(~atan(x7/x4),coefs,vmat2)*g$period/(pi*2)
     lag.belowSE <- deltamethod(~atan(x8/x4),coefs,vmat2)*g$period/(pi*2)
-    SEs<- list("n"=SEn,"m"=SEm,"b.x"=sqrt(vmat2[3,3]),"b.y"=sqrt(vmat2[4,4]),"phase.angle"=sqrt(vmat[1,1]),
-               "cx"=sqrt(vmat2[1,1]),"cy"=sqrt(vmat2[2,2]),"retention.above"=sqrt(vmat2[7,7]),"retention.below"=sqrt(vmat2[8,8]),
-               "coercion.above"=coercion.aboveSE,"coercion.below"=coercion.belowSE,"area"=areaSE,"lag.above"=lag.aboveSE,
-               "lag.below"=lag.belowSE,"split.angle"=splitSE,"hysteresis.x.above"=hysteresis.x.aboveSE,
-               "hysteresis.x.below"=hysteresis.x.belowSE,"hysteresis.y.above"=hysteresis.y.aboveSE,"hysteresis.y.below"=hysteresis.y.belowSE)
+    SEs<- list("n"=SEn,"m"=SEm,"b.x"=sqrt(vmat2[3,3]),"b.y"=sqrt(vmat2[4,4]),
+               "retention.above"=sqrt(vmat2[7,7]),"retention.below"=sqrt(vmat2[8,8]),
+               "coercion.above"=coercion.aboveSE,"coercion.below"=coercion.belowSE,"lag.above"=lag.aboveSE,
+               "lag.below"=lag.belowSE,"area"=areaSE,"phase.angle"=sqrt(vmat[1,1]),"split.angle"=splitSE,"hysteresis.x.above"=hysteresis.x.aboveSE,
+               "hysteresis.x.below"=hysteresis.x.belowSE,"hysteresis.y.above"=hysteresis.y.aboveSE,"hysteresis.y.below"=hysteresis.y.belowSE,"cx"=sqrt(vmat2[1,1]),"cy"=sqrt(vmat2[2,2]))
     
   }
   SEs
