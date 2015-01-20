@@ -88,8 +88,8 @@ delta.error <- function(g){
     split.angle<- deltamethod(~atan(x4/sqrt(x1^2+x2^2)), c(z$coefficients[-1],z2$coefficients[-1]), cov.matrix)
     theta <- deltamethod(~ (-asin(2/(tan(atan(-x1/x2)-atan(-x3/x4))*((sqrt((x1^2+x2^2+x3^2+x4^2-sqrt((x1^2+x2^2+x3^2+x4^2)^2-4*(x1^2+x2^2)*(x3^2+x4^2)*sin(atan(-x1/x2)-atan(-x3/x4))^2))/2))/(sqrt((x1^2+x2^2+x3^2+x4^2+sqrt((x1^2+x2^2+x3^2+x4^2)^2-4*(x1^2+x2^2)*(x3^2+x4^2)*sin(atan(-x1/x2)-atan(-x3/x4))^2))/2))-(sqrt((x1^2+x2^2+x3^2+x4^2+sqrt((x1^2+x2^2+x3^2+x4^2)^2-4*(x1^2+x2^2)*(x3^2+x4^2)*sin(atan(-x1/x2)-atan(-x3/x4))^2))/2))/(sqrt((x1^2+x2^2+x3^2+x4^2-sqrt((x1^2+x2^2+x3^2+x4^2)^2-4*(x1^2+x2^2)*(x3^2+x4^2)*sin(atan(-x1/x2)-atan(-x3/x4))^2))/2)))))/2)*180/pi, c(z$coefficients[-1],z2$coefficients[-1]), cov.matrix)
     
-    SE <- c("b.x"=b.x,"b.y"=se2[3],"phase.angle"=phase.angle ,"cx"=se1[1],"cy"=se2[1],"retention"=se2[2],"coercion"=coercion,"area"=area,"lag"=as.vector(lag),
-"split.angle"=split.angle,"ampx"=ampx,"ampy"=ampy,"rote.deg"=theta)
+    SE <- c("b.x"=b.x,"b.y"=se2[3],"retention"=se2[2],"coercion"=coercion,"lag"=as.vector(lag),"area"=area,
+"phase.angle"=phase.angle ,"split.angle"=split.angle,"cx"=se1[1],"cy"=se2[1],"ampx"=ampx,"ampy"=ampy,"rote.deg"=theta)
   }
 
 SE
