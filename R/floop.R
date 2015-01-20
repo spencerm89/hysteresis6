@@ -124,8 +124,8 @@ inti <- internal.1(start$vals["semi.major"],start$vals["semi.minor"],start$vals[
   area <- (0.5/(beta((m+3)/2,(m+3)/2)*(m+2))+1/beta((m+1)/2,(m+1)/2)-1/beta((m+3)/2,(m-1)/2))/(2^m)*pi*abs(retention*b.x)
 if (method=="harmonic2" & m %% 2==0) area <- 0
  lag<-abs(atan2(retention,b.y))*period/(pi*2)
-  ans <- list("values"=c("n"=n, "m"=m,"b.x"=b.x,"b.y"=b.y,"phase.angle"=as.vector(phase.angle),"cx"=cx,"cy"=cy,"retention"=retention,
-               "coercion"=coercion,"area"=area, "lag"=lag,"beta.split.angle"=beta.split.angle,"hysteresis.x"=hysteresis.x, "hysteresis.y"=hysteresis.y),"fit"=fit,
+  ans <- list("values"=c("n"=n, "m"=m,"b.x"=b.x,"b.y"=b.y,"retention"=retention,"coercion"=coercion,"lag"=lag,
+               "area"=area, "phase.angle"=as.vector(phase.angle),"beta.split.angle"=beta.split.angle,"hysteresis.x"=hysteresis.x,"cx"=cx,"cy"=cy, "hysteresis.y"=hysteresis.y),"fit"=fit,
               "x"=dat$x,"y"=dat$y,"pred.x"=pred.x,"pred.y"=pred.y,"period"=period, "period.time"=t+phase.angle,"residuals"=residuals,"call"=floopcall, "extended.classical"=extended.classical,"method"=method)
 ans$call <- floopcall
  ans$Std.Errors <- try(unlist(delta.error.loop(ans)))
