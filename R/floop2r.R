@@ -130,9 +130,9 @@ inti <- internal.1(start$vals["semi.major"],start$vals["semi.minor"],start$vals[
  if (method=="harmonic2" & m %% 2==0) area <- 0
  lag.above<-abs(atan2(retention.above,b.y))*period/(pi*2)
  lag.below<-abs(atan2(retention.below,b.y))*period/(pi*2)
-  ans <- list("values"=c("n"=n, "m"=m,"b.x"=b.x,"b.y"=b.y,"phase.angle"=as.vector(phase.angle),"cx"=cx,"cy"=cy,"retention.above"=retention.above,
-              "retention.below"=retention.below, "coercion.above"=coercion.above,"coercion.below"=coercion.below,"area"=area, "lag.above"=lag.above,"lag.below"=lag.below,"beta.split.angle"=beta.split.angle,
-              "hysteresis.x.above"=hysteresis.x.above,"hysteresis.x.below"=hysteresis.x.below, "hysteresis.y.above"=hysteresis.y.above,"hysteresis.y.below"=hysteresis.y.below),"fit"=fit,
+  ans <- list("values"=c("n"=n, "m"=m,"b.x"=b.x,"b.y"=b.y,"retention.above"=retention.above,"retention.below"=retention.below,
+               "coercion.above"=coercion.above,"coercion.below"=coercion.below, "lag.above"=lag.above,"lag.below"=lag.below,"area"=area,"phase.angle"=as.vector(phase.angle),"beta.split.angle"=beta.split.angle,
+              "hysteresis.x.above"=hysteresis.x.above,"hysteresis.x.below"=hysteresis.x.below, "hysteresis.y.above"=hysteresis.y.above,"hysteresis.y.below"=hysteresis.y.below,"cx"=cx,"cy"=cy),"fit"=fit,
               "x"=dat$x,"y"=dat$y,"pred.x"=pred.x,"pred.y"=pred.y,"period"=period, "period.time"=t2,"residuals"=residuals,"call"=floopcall, "extended.classical"=extended.classical,"method"=method)
 ans$call <- floopcall
  ans$Estimates <- ans$values
