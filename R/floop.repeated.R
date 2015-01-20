@@ -1,5 +1,5 @@
 floop.repeated <-
-function(x,y=NULL,m=1,n=1,subjects=NULL,repeated=NULL,subjects.in="all",repeated.in="all" ,...) {
+function(x,y=NULL,n=1,m=1,subjects=NULL,repeated=NULL,subjects.in="all",repeated.in="all" ,...) {
 
   if (subjects.in[1]=="all" & !is.null(subjects)) {
     subjects <- factor(subjects)
@@ -20,5 +20,5 @@ if (repeated.in[1]=="all" & !is.null(repeated)) {
   else  {
     subjects2<-list("subjects"=subjects,"repeated"=repeated)
     subset<-((subjects %in% subjects.in) & (repeated %in% repeated.in))}
-  floop(x,y,m,n,subjects=subjects2,subset=subset,...)
+  floop(x,y,n,m,subjects=subjects2,subset=subset,...)
         }
