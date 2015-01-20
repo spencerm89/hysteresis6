@@ -37,6 +37,6 @@ harmonic2boot <-
     retention<- coef(Tb.lm)[[2]]
     cy<-coef(Tb.lm)[[1]]
 
-    z <- c("cx"=cx,"cy"=cy, "b.x"=b.x,"b.y"=b.y,"phase.angle"=phase.angle, "retention"=retention)
+    z <- c("b.x"=b.x,"b.y"=b.y, "retention"=retention,"phase.angle"=phase.angle,"cx"=cx,"cy"=cy )
 z
   }
