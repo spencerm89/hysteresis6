@@ -125,7 +125,7 @@ inti <- internal.1(start$vals["semi.major"],start$vals["semi.minor"],start$vals[
 if (method=="harmonic2" & m %% 2==0) area <- 0
  lag<-abs(atan2(retention,b.y))*period/(pi*2)
   ans <- list("values"=c("n"=n, "m"=m,"b.x"=b.x,"b.y"=b.y,"retention"=retention,"coercion"=coercion,"lag"=lag,
-               "area"=area, "phase.angle"=as.vector(phase.angle),"beta.split.angle"=beta.split.angle,"hysteresis.x"=hysteresis.x,"cx"=cx,"cy"=cy, "hysteresis.y"=hysteresis.y),"fit"=fit,
+               "area"=area, "phase.angle"=as.vector(phase.angle),"beta.split.angle"=beta.split.angle,"hysteresis.x"=hysteresis.x,"hysteresis.y"=hysteresis.y,"cx"=cx,"cy"=cy),"fit"=fit,
               "x"=dat$x,"y"=dat$y,"pred.x"=pred.x,"pred.y"=pred.y,"period"=period, "period.time"=t+phase.angle,"residuals"=residuals,"call"=floopcall, "extended.classical"=extended.classical,"method"=method)
 ans$call <- floopcall
  ans$Std.Errors <- try(unlist(delta.error.loop(ans)))
