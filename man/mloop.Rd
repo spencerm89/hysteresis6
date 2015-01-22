@@ -11,7 +11,7 @@ Simulate a hysteresis loop with a variety of possible parameters.
 \usage{
 mloop(cx = 0, cy = 0, retention = 0.2, b.x = 0.6, b.y = 0.8,n = 1, m = 1, 
      sd.x = 0, sd.y = 0, phase.angle = 0, n.points = 24, 
-    period = 24,extended.classical=FALSE)  
+    period = 24,extended.classical=FALSE,seed=NULL)  
 mloop2r(cx=0,cy=0,retention.above=0.2,retention.below=0.15,b.x=0.6,b.y=0.8,n=1,m=1,sd.x=0,sd.y=0,phase.angle=0,n.points=24,period=24,extended.classical=FALSE))
 }
 
@@ -64,6 +64,9 @@ logical. If true, fit a classical hysteresis loop regardless of n. Uses \deqn{y_
 \deqn{y_t=b.y*cos(2*pi*t/period)^n+retention*sin(2*pi*t/period)^m+cy+e_{y,t}}
 Allows the user to fit classical loops with any n>1 instead of just odd numbered n. Default is false.
 }
+  \item{seed}{ 
+ integer, the starting seed. 
+} 
 }
 \details{
 Simulates input and output variables x and y that form a hysteresis loop of the form \deqn{x_t=b.x*cos(2pi*t/period+phase.angle)+cx+e_{x,t}} \deqn{y_t=b.y*cos(2pi*t/period+phase.angle)^n+retention*sin(2pi*t/period+phase.angle)^m+cy+e_{y,t}}  where \deqn{t=0,...,n.points-1 if times='equal'} and the error terms e are normally distributed. Also produces a vector of derived values.}
