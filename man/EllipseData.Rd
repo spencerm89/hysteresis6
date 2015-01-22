@@ -43,7 +43,7 @@ six.models
 #Model fit for B-1
 six.models$models["B",1] 
 #par(mfrow=c(2,3))
-plot(six.models)
+plot(six.models,xlab="X input",ylab="Y output")
 #par(mfrow=c(1,1))
 }
 \keyword{datasets}
