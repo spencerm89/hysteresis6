@@ -123,8 +123,8 @@ inti <- internal.1(start$vals["semi.major"],start$vals["semi.minor"],start$vals[
   coercion <- hysteresis.x*b.x
   } else {
   warning("coercion and hysteresis.x currently available only if m=n")
-  is.na(hysteresis.x) = NA
- is.na( coercion) = NA
+  hysteresis.x = is.na(NA)
+  coercion = is.na(NA)
   }
   hysteresis.y <- retention/b.y
   area <- (0.5/(beta((m+3)/2,(m+3)/2)*(m+2))+1/beta((m+1)/2,(m+1)/2)-1/beta((m+3)/2,(m-1)/2))/(2^m)*pi*abs(retention*b.x)
