@@ -122,7 +122,7 @@ inti <- internal.1(start$vals["semi.major"],start$vals["semi.minor"],start$vals[
   hysteresis.x <- 1/sqrt(1+(b.y/abs(retention))^(2/m))
   coercion <- hysteresis.x*b.x
   } else {
-  warning("coercion and hysteresis.x currently available only if m=n)
+  warning("coercion and hysteresis.x currently available only if m=n")
   is.na(hysteresis.x) = NA
  is.na( coercion) = NA
   }
