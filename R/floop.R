@@ -123,8 +123,8 @@ inti <- internal.1(start$vals["semi.major"],start$vals["semi.minor"],start$vals[
   coercion <- hysteresis.x*b.x
   } else {
   warning("coercion and hysteresis.x currently available only if m=n")
-  hysteresis.x = is.na(NA)
-  coercion = is.na(NA)
+  hysteresis.x = NA
+  coercion = NA
   }
   hysteresis.y <- retention/b.y
   area <- (0.5/(beta((m+3)/2,(m+3)/2)*(m+2))+1/beta((m+1)/2,(m+1)/2)-1/beta((m+3)/2,(m-1)/2))/(2^m)*pi*abs(retention*b.x)
@@ -136,6 +136,7 @@ if (method=="harmonic2" & m %% 2==0) area <- 0
 ans$call <- floopcall
  ans$Std.Errors <- try(unlist(delta.error.loop(ans)))
  ans$Estimates <- ans$values
+ ans$Std.Errors <- ifelse(is.na(ans$Estimates),NA,ans$Std.Errors)
   class(ans) <- "fittedloop"
   ans
 }
