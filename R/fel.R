@@ -40,7 +40,7 @@ function(x,y=NULL,method="harmonic2",period=NULL,subjects=NULL,times="unknown",s
       if (is.null(names(subjects))) colnames(subjectmat) <- colnames(values)[1:length(subjects)]
         
       if (method!="harmonic2" & method!="geometric") values <- values[,c(colnames(subjectmat),"b.x","b.y",
-                                "retention","coercion","lag","area",
+                                "retention","coercion","lag","area","phase.angle",
                                 "split.angle","hysteresis.x","hysteresis.y","cx","cy","ampx","ampy","rote.deg","rote.rad",
                                 "semi.major","semi.minor","focus.x","focus.y","eccentricity")]
       else values <- values[,c(colnames(subjectmat),"b.x","b.y",
