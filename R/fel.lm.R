@@ -39,7 +39,7 @@ der.summ <- fitstatistics(x,y,preds$pred.x,preds$pred.y,n,method="lm",period)
     
 z <- c("b.x"=inti[1],"b.y"=inti[2],"retention"=inti[3],"coercion"=der[3],"lag"=der[2], "area"=der[1],
           "split.angle"=amps[1],"hysteresis.x"=amps[2],"hysteresis.y"=amps[3],
-        "cx"=cx,"cy"=cy, "ampx"=amps[4],"ampy"=amps[5],"rote.rad"=theta,"rote.deg"=rotated.angle,
+        "cx"=cx,"cy"=cy, "ampx"=amps[4],"ampy"=amps[5],"rote.deg"=rotated.angle,"rote.rad"=theta,
         "semi.major"=semi.major,"semi.minor"=semi.minor, "focus.x"=focus[1],"focus.y"=focus[2], "eccentricity"=focus[3],"n"=n)
 
    res <- list("method"="lm","x"=x,"y"=y,"pred.x"=preds$pred.x,"pred.y"=preds$pred.y,"period.time"=preds$period.time,"values"=z,
