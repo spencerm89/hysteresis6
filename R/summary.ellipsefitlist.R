@@ -18,23 +18,23 @@ Estimates <- matrix(values[,"Boot.Estimate"],nrow=length(g$Estimates[,1]),byrow=
 rownames(Estimates) <- rownames(g$Estimates)
 colnames(Estimates) <- names(g$models[[1]]$values)
 if (g$models[[1]]$method!="harmonic2" & g$models[[1]]$method!="geometric") Estimates <- Estimates[,c("b.x","b.y",
-                          "cx","cy","retention","coercion","area",
-                          "lag","split.angle","hysteresis.x","hysteresis.y","ampx","ampy","rote.deg","rote.rad",
+                          "retention","coercion","lag","area",
+                          "split.angle","hysteresis.x","hysteresis.y","cx","cy","ampx","ampy","rote.deg","rote.rad",
                           "semi.major","semi.minor","focus.x","focus.y","eccentricity")]
-else Estimates <- Estimates[,c("b.x","b.y","phase.angle",
-                               "cx","cy","retention","coercion","area",
-                               "lag","split.angle","hysteresis.x","hysteresis.y","ampx","ampy","rote.deg","rote.rad",
+else Estimates <- Estimates[,c("b.x","b.y",
+                               "retention","coercion","lag","area","phase.angle",
+                               "split.angle","hysteresis.x","hysteresis.y","cx","cy","ampx","ampy","rote.deg","rote.rad",
                                "semi.major","semi.minor","focus.x","focus.y","eccentricity")]
 Std.Error <- matrix(values[,"Std.Error"],nrow=length(g$Estimates[,1]),byrow=TRUE)
 rownames(Std.Error) <- rownames(g$Estimates)
 colnames(Std.Error) <- names(g$models[[1]]$values)
 if (g$models[[1]]$method!="harmonic2" & g$models[[1]]$method!="geometric") Std.Error <- Std.Error[,c("b.x","b.y",
-                                    "cx","cy","retention","coercion","area",
-                                    "lag","split.angle","hysteresis.x","hysteresis.y","ampx","ampy","rote.deg","rote.rad",
+                                    "retention","coercion","area","lag",
+                                    "split.angle","hysteresis.x","hysteresis.y","cx","cy","ampx","ampy","rote.deg","rote.rad",
                                     "semi.major","semi.minor","focus.x","focus.y","eccentricity")]
-else Std.Error <- Std.Error[,c("b.x","b.y","phase.angle",
-                               "cx","cy","retention","coercion","area",
-                               "lag","split.angle","hysteresis.x","hysteresis.y","ampx","ampy","rote.deg","rote.rad",
+else Std.Error <- Std.Error[,c("b.x","b.y",
+                               "retention","coercion","lag","area","phase.angle",
+                               "split.angle","hysteresis.x","hysteresis.y","cx","cy","ampx","ampy","rote.deg","rote.rad",
                                "semi.major","semi.minor","focus.x","focus.y","eccentricity")]}
 
 else {
