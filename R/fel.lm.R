@@ -37,10 +37,10 @@ preds <- geometric_distance("x"=x,"y"=y,"cx"=cx,"cy"=cy,"semi.major"=semi.major,
 
 der.summ <- fitstatistics(x,y,preds$pred.x,preds$pred.y,n,method="lm",period)
     
-z <- c("cx"=cx,"cy"=cy,"rote.rad"=theta,"semi.major"=semi.major,"semi.minor"=semi.minor,"rote.deg"=rotated.angle,
- "area"=der[1],"lag"=der[2],"coercion"=der[3],
-"b.x"=inti[1],"b.y"=inti[2],"retention"=inti[3],"split.angle"=amps[1],"hysteresis.x"=amps[2],"hysteresis.y"=amps[3],"ampx"=amps[4],"ampy"=amps[5],
-         "focus.x"=focus[1],"focus.y"=focus[2], "eccentricity"=focus[3],"n"=n)
+z <- c("b.x"=inti[1],"b.y"=inti[2],"retention"=inti[3],"coercion"=der[3],"lag"=der[2], "area"=der[1],
+          "split.angle"=amps[1],"hysteresis.x"=amps[2],"hysteresis.y"=amps[3],
+        "cx"=cx,"cy"=cy, "ampx"=amps[4],"ampy"=amps[5],"rote.rad"=theta,"rote.deg"=rotated.angle,
+        "semi.major"=semi.major,"semi.minor"=semi.minor, "focus.x"=focus[1],"focus.y"=focus[2], "eccentricity"=focus[3],"n"=n)
 
    res <- list("method"="lm","x"=x,"y"=y,"pred.x"=preds$pred.x,"pred.y"=preds$pred.y,"period.time"=preds$period.time,"values"=z,
                "fit.statistics"=der.summ,"residuals"=resid(model),"fit"=model)
