@@ -1,4 +1,5 @@
 mel1 <- function(cx=32,cy=39,rote.deg=2,semi.major=7,semi.minor=0.23,phase.angle=0,n.points=24,period=24,sd.x=0,sd.y=0) {
+if (!is.null(seed)) set.seed(seed)
 theta <- rote.deg/180*pi
  t <-(0:(n.points-1))/period*2*pi
 inti <- internal.1(semi.major,semi.minor,abs(theta))
