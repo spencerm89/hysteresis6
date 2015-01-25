@@ -85,7 +85,7 @@ function(x,y=NULL,method="harmonic2",period=NULL,subjects=NULL,times="unknown",s
   if (method!="direct") ans$Std.Errors <- delta.error(ans)
   ans$Estimates <- ans$values
   if (method!="harmonic2" & method!="geometric")     ans$Estimates<- ans$Estimates[c("b.x","b.y",
-                                              "retention","coercion","lag","area",
+                                              "retention","coercion","lag","area","phase.angle",
                                               "split.angle","hysteresis.x","hysteresis.y","cx","cy","ampx","ampy","rote.deg",
                                               "semi.major","semi.minor","focus.x","focus.y","eccentricity")]
   else     ans$Estimates <- ans$Estimates[c("b.x","b.y",
