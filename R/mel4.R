@@ -1,5 +1,6 @@
 mel4 <- function(x2=0.002293,xy=-.06960,y2=0.9976,x=2.567,y=-75.58,int=1432.7,
                  phase.angle=0,n.points=24,period=24,sd.x=0,sd.y=0) {
+  if (!is.null(seed)) set.seed(seed)
   a<-c(x2,xy,y2,x,y,int)
   theta <- atan2(a[2],a[1]-a[3])/2
   while(theta<0){theta<-pi/2+theta} 
