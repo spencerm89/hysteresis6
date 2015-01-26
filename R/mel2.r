@@ -1,4 +1,5 @@
 mel2 <- function(cx=32,cy=39,b.x=6.99,b.y=0.244,retention=0.23,phase.angle=0,n.points=24,period=24,sd.x=0,sd.y=0) {
+if (!is.null(seed)) set.seed(seed)
 ti <- (0:(n.points-1))*2/period*pi
 wrx <- rnorm(n.points,0,sd.x)
 wry <- rnorm(n.points,0,sd.y)
