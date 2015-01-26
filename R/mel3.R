@@ -1,4 +1,5 @@
 mel3 <- function(cx=32,cy=39,ampx=6.99,ampy=0.335,lag=2.888,phase.angle=0,n.points=24,period=24,sd.x=0,sd.y=0) {
+if (!is.null(seed)) set.seed(seed)
 lag.radian <- lag/period*2*pi
  t <-(0:(n.points-1))/period*2*pi
 inti2 <- internal.3(ampx,ampy,lag.radian)
