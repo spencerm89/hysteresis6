@@ -9,7 +9,7 @@ Inherent and Derived Parameter Definitions for Hysteresis Loops/Ellipses
 \code{\link{floop}} returns a \code{fittedloop} object and calculates a variety of hysteresis loop parameters. This is a list of definitions for these parameters, as well as some only available for ellipses through \code{\link{fel}}. 
 If \code{floop2r} is used a number of these parameters have differing values above and below the split line. The generalized transcendental equations used to fit these loops are
 \deqn{x_t=b.x*cos(2pi*t/period+phase.angle)+cx+e_{x,t}} \deqn{y_t=b.y*cos(2pi*t/period+phase.angle)^n+retention*sin(2pi*t/period+phase.angle)^m+cy+e_{y,t}}  where
-(\deqn{t=0,...,n.points-1} if times='equal')
+\deqn{t=0,...,(n.points-1)} if times='equal'
 }
 
 \value{
@@ -80,7 +80,7 @@ input x and output y distances of focus points from center.
   }
    \item{eccentricity}{
 Measure of deviation from circle. Zero indicates no deviation from circle.
-\deqn{sqrt{frac{semi.major^2-semi.minor^2}\{semi.major^2}}}
+\deqn{\sqrt{\frac{semi.major^2-semi.minor^2}{semi.major^2}}}
   }
 }
 \references{
