@@ -15,38 +15,38 @@ If \code{floop2r} is used a number of these parameters have differing values abo
 \value{
 Specified loop parameters.
   \item{n}{
-  Positive integer which determines shape of split line,"plateau" parameter. If n=1, split line is linear; If n is even, split line has concave (u-shape);  
+Positive integer which determines shape of split line,"plateau" parameter. If n=1, split line is linear; If n is even, split line has concave (u-shape);  
   If n is odd and higher than 1, split line has sigmoidal (chair shape). A larger n extends length where derivative is zero (seat of chair).  
 }
   \item{m}{
-  Positive odd integer called "bulging" parameter, indicates degree of outward curving. The bulge around split line decreases as m increases.  
+Positive odd integer called "bulging" parameter, indicates degree of outward curving. The bulge around split line decreases as m increases.  
 }
 Inherent Parameters
   \item{cx}{
-  center of input x.
+center of input x.
 }
   \item{cy}{
-  center of output y.
+center of output y.
 }
   \item{phase.angle}{
-  defines the starting point of the loop. The initial angle of the input function at its origin.}
+defines the starting point of the loop. The initial angle of the input function at its origin.}
  \item{b.x}{
- saturation point x coordinate. Horizontal distance from the center to the maximum value of the input.
+saturation point x coordinate. Horizontal distance from the center to the maximum value of the input.
 }
   \item{b.y}{
-  saturation point y coordinate. Vertical distance from the center to the point where the input is at its maximum.
+saturation point y coordinate. Vertical distance from the center to the point where the input is at its maximum.
 } 
   \item{retention}{
-  split point, representing vertical distance from center to upper loop trajectory. It is the intersection of the loop and the output axis characterizing the distortion in the response at the average input challenge.
+split point, representing vertical distance from center to upper loop trajectory. It is the intersection of the loop and the output axis characterizing the distortion in the response at the average input challenge.
 }
 
 Derived Hysteresis Parameters
   \item{coercion}{
-  the horizontal distance of the input from the center. It indicates the strain the forcing function places on the output. It is the positive root of intersection between the loop and input axis.
-  } 
+the horizontal distance of the input from the center. It indicates the strain the forcing function places on the output. It is the positive root of intersection between the loop and input axis.
+} 
   \item{lag}{
-  lag indicates the delay between attributes of the output and the input (such as peak to peak for the ellipse when m=1, n=1).
-  }
+lag indicates the delay between attributes of the output and the input (such as peak to peak for the ellipse when m=1, n=1).
+}
   \item{area}{
   the area of the hysteresis loop. Can indicate the work done during one cycle or period.
   }
@@ -91,7 +91,7 @@ Spencer Maynes, Fan Yang, and Anne Parkhurst.
 }
 \seealso{
 \code{\link{mloop}} for simulating a hysteresis loop and \code{\link{floop}} for fitting a hysteresis loop.
-\
+
 \code{\link{mel}} for simulating an ellipse and \code{\link{fel}} for fitting an ellipse. 
 }
 \examples{
