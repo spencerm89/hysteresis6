@@ -19,9 +19,9 @@ If \code{floop2r} is used a number of these parameters have differing values abo
  } 
    \item{m}{ 
  Positive odd integer for the bulging parameter, indicates degree of outward curving (1=highest level of bulging). 
- } }
+ } 
 
-\value{ 
+ 
  Specified loop parameters. 
    \item{n}{ 
  Positive  
