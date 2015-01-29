@@ -12,13 +12,15 @@ If \code{floop2r} is used a number of these parameters have differing values abo
 \deqn{t=0,...,(n.points-1)} if times='equal'
 }
 
-\value{
-Specified loop parameters.
-  \item{n}{
-Positive integer which determines shape of split line,"plateau" parameter. If n=1, split line is linear; If n is even, split line has concave (u-shape);  
-  If n is odd and higher than 1, split line has sigmoidal (chair shape). A larger n extends length where derivative is zero (seat of chair).  
+\value{ 
+ Specified loop parameters. 
+   \item{n}{ 
+ Positive  
+ integer which determines shape of split line,"plateau" parameter. If n=1, split line is linear; If n is even, split line has concave (u-shape);  
+If n is odd and higher than 1, split line has sigmoidal (chair shape). A larger n extends length where derivative is zero (seat of chair).  
 }
-  \item{m}{
+  \item{m}{ 
+Positive 
 Positive odd integer called "bulging" parameter, indicates degree of outward curving. The bulge around split line decreases as m increases.  
 }
 Inherent Parameters
@@ -58,7 +60,7 @@ lag indicates the delay between attributes of the output and the input (such as 
   }
   \item{hysteresis.y}{
   hysteresis along the output axis. The proportion of retention due to b.y.
-  }
+ }
 Ellipse Parameters
  \item{ampx}{
  Amplitude of the input, equal to b.x.
@@ -80,7 +82,7 @@ input x and output y distances of focus points from center.
   }
    \item{eccentricity}{
 Measure of deviation from circle. Zero indicates no deviation from circle.
-\deqn{\sqrt{\frac{semi.major^2-semi.minor^2}{semi.major^2}}}
+\deqn{\sqrt{\frac{{semi.major^2-semi.minor^2}{semi.major^2}}}}
   }
 }
 \references{
