@@ -16,7 +16,7 @@ If \code{floop2r} is used a number of these parameters have differing values abo
 Specified loop Parameters
   \item{n}{ 
 Positive integer which determines shape of split line,"plateau" parameter. If n=1, split line is linear; If n is even, split line has concave (u-shape);  
-If n is odd and higher than 1, split line has sigmoidal (chair shape). A larger n extends length where derivative is zero (seat of chair).
+If n is odd and higher than 1, split line has sigmoidal (chair) shape. A larger n extends length where derivative is zero (seat of chair).
 }
   \item{m}{ 
  Positive odd integer called "bulging" parameter, indicates degree of outward curving. The bulge around split line decreases as m increases.  
@@ -66,7 +66,7 @@ Ellipse Parameters
  Amplitude of the output.
  }
   \item{rote.deg and rote.rad}{
-  theta, counter clockwise angle of rotation between the input axis and the semi-major axis of the loop.In degrees and radians respectively.
+  theta, counter clockwise angle of rotation between the input axis and the semi-major axis of the loop (in degrees and radians respectively).
   }
   \item{semi.major}{
   half major axis of ellipse, maximum distance from center to perimeter of ellipse.
