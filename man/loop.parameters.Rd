@@ -15,7 +15,7 @@ Specified loop parameters.
 Positive integer for the split line parameter. If n=1, split line is linear; If n is even, split line has a u shape; If n is odd and higher than 1, split line has a chair or classical shape.
 }
   \item{m}{
-Positive odd integer for the bulging parameter, indicates degree of outward curving (1=highest level of bulging).
+Positive odd integer called "bulging" parameter, indicates degree of outward curving. The bulge around split line decreases as m increases.  
 }
 Inherent Parameters
   \item{b.x}{
