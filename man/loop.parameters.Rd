@@ -20,16 +20,19 @@ Positive integer for the split line parameter. If n=1, split line is linear; If 
  \item{m}{ 
 Positive odd integer for the bulging parameter, indicates degree of outward curving (1=highest level of bulging). 
  } 
-
+Inherent Parameters
+  \item{cx}{
+center of input x.
+}
  Specified loop parameters. 
-   \item{n}{ 
+  \item{n}{ 
  Positive  
  integer which determines shape of split line,"plateau" parameter. If n=1, split line is linear; If n is even, split line has concave (u-shape);  
 If n is odd and higher than 1, split line has sigmoidal (chair shape). A larger n extends length where derivative is zero (seat of chair).
 }
   \item{m}{ 
-Positive 
-Positive odd integer called "bulging" parameter, indicates degree of outward curving. The bulge around split line decreases as m increases.  
+ Positive 
+ Positive odd integer called "bulging" parameter, indicates degree of outward curving. The bulge around split line decreases as m increases.  
 }
 Inherent Parameters
   \item{cx}{
@@ -101,7 +104,7 @@ Spencer Maynes, Fan Yang, and Anne Parkhurst.
 }
 \seealso{
 \code{\link{mloop}} for simulating a hysteresis loop and \code{\link{floop}} for fitting a hysteresis loop.
-\
+
 \code{\link{mel}} for simulating an ellipse and \code{\link{fel}} for fitting an ellipse. 
 }
 \examples{
