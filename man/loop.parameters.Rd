@@ -90,7 +90,7 @@ input x and output y distances of focus points from center.
   }
    \item{eccentricity}{
 Measure of deviation from circle. Zero indicates no deviation from circle.
-\deqn{\sqrt{\frac{semi.major^2-semi.minor^2}/{semi.major^2}}
+\deqn{\sqrt{\frac{semi.major^2-semi.minor^2}/{semi.major^2}}}
   }
 }
 \references{
