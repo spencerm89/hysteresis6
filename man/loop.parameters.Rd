@@ -17,7 +17,7 @@ If \code{floop2r} is used a number of these parameters have differing values abo
    \item{n}{ 
  Positive  
  integer which determines shape of split line,"plateau" parameter. If n=1, split line is linear; If n is even, split line has concave (u-shape);  
-If n is odd and higher than 1, split line has sigmoidal (chair shape). A larger n extends length where derivative is zero (seat of chair).  
+If n is odd and higher than 1, split line has sigmoidal (chair shape). A larger n extends length where derivative is zero (seat of chair).
 }
   \item{m}{ 
 Positive 
@@ -82,7 +82,7 @@ input x and output y distances of focus points from center.
   }
    \item{eccentricity}{
 Measure of deviation from circle. Zero indicates no deviation from circle.
-\deqn{\sqrt{\frac{{semi.major^2-semi.minor^2}{semi.major^2}}}}
+\deqn{\sqrt{\frac{{semi.major^2-semi.minor^2}\{semi.major^2}}}}
   }
 }
 \references{
@@ -93,7 +93,7 @@ Spencer Maynes, Fan Yang, and Anne Parkhurst.
 }
 \seealso{
 \code{\link{mloop}} for simulating a hysteresis loop and \code{\link{floop}} for fitting a hysteresis loop.
-
+\
 \code{\link{mel}} for simulating an ellipse and \code{\link{fel}} for fitting an ellipse. 
 }
 \examples{
