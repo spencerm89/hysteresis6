@@ -6,13 +6,17 @@
 Inherent and Derived Parameter Definitions for Hysteresis Loops/Ellipses
 }
 \description{
-\code{\link{floop}} returns a \code{fittedloop} object and calculates a variety of hysteresis loop parameters. This is a list of definitions for these parameters, as well as some only available for ellipses through \code{\link{fel}}. If \code{floop2r} is used a number of these parameters have differing values above and below the split line. The generalized transcendental equations used to fit these loops are \deqn{x_t=b.x*cos(2pi*t/period+phase.angle)+cx+e_{x,t}} \deqn{y_t=b.y*cos(2pi*t/period+phase.angle)^n+retention*sin(2pi*t/period+phase.angle)^m+cy+e_{y,t}}  where \deqn{t=0,...,n.points-1 if times='equal'}
+\code{\link{floop}} returns a \code{fittedloop} object and calculates a variety of hysteresis loop parameters. This is a list of definitions for these parameters, as well as some only available for ellipses through \code{\link{fel}}. 
+If \code{floop2r} is used a number of these parameters have differing values above and below the split line. The generalized transcendental equations used to fit these loops are
+\deqn{x_t=b.x*cos(2pi*t/period+phase.angle)+cx+e_{x,t}} \deqn{y_t=b.y*cos(2pi*t/period+phase.angle)^n+retention*sin(2pi*t/period+phase.angle)^m+cy+e_{y,t}}  where
+\{deqn{t=0,...,n.points-1} if times='equal'}
 }
 
 \value{
 Specified loop parameters.
   \item{n}{
-Positive integer for the split line parameter. If n=1, split line is linear; If n is even, split line has a u shape; If n is odd and higher than 1, split line has a chair or classical shape.
+Positive integer which determines shape of split line,"plateau" parameter. If n=1, split line is linear; If n is even, split line has concave (u-shape);  
+If n is odd and higher than 1, split line has sigmoidal (chair shape). A larger n extends length where derivative is zero (seat of chair).  
 }
   \item{m}{
 Positive odd integer called "bulging" parameter, indicates degree of outward curving. The bulge around split line decreases as m increases.  
