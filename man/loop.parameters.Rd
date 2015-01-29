@@ -94,12 +94,12 @@ Spencer Maynes, Fan Yang, and Anne Parkhurst.
 \code{\link{mel}} for simulating an ellipse and \code{\link{fel}} for fitting an ellipse. 
 }
 \examples{
-theloop<-mloop(sd.x=0.05,sd.y=0.05,n=2,m=3)
+theloop<-mloop(sd.x=0.05,sd.y=0.05,n=2,m=3,seed=123)
 loopmodel<-floop(theloop$x,theloop$y,n=2,m=3)
 loopmodel
 plot(loopmodel,main="Hysteresis Loop n=2 m=3",values="hysteresis")
 
-#Ellipse Parameters
+#Estimate ELLIPSE without error from Eigenvalues and Angle of Rotation
 ellipse.eig <- mel(semi.major=7,semi.minor=4,rote.deg=30)
 ellip.eigen.fit <- fel(ellipse.eig$x,ellipse.eig$y)
 ellip.eigen.fit$Estimates
