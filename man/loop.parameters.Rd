@@ -13,15 +13,14 @@ If \code{floop2r} is used a number of these parameters have differing values abo
 }
 
 \value{ 
- Specified loop parameters. 
-   \item{n}{ 
- Positive integer for the split line parameter. If n=1, split line is linear; If n is even, split line has a u shape; If n is odd and higher than 1, split line has a chair or classical shape. 
+Specified loop parameters. 
+  \item{n}{ 
+Positive integer for the split line parameter. If n=1, split line is linear; If n is even, split line has a u shape; If n is odd and higher than 1, split line has a chair or classical shape. 
  } 
-   \item{m}{ 
- Positive odd integer for the bulging parameter, indicates degree of outward curving (1=highest level of bulging). 
+ \item{m}{ 
+Positive odd integer for the bulging parameter, indicates degree of outward curving (1=highest level of bulging). 
  } 
 
- 
  Specified loop parameters. 
    \item{n}{ 
  Positive  
@@ -91,7 +90,7 @@ input x and output y distances of focus points from center.
   }
    \item{eccentricity}{
 Measure of deviation from circle. Zero indicates no deviation from circle.
-\deqn{\sqrt{\frac{{semi.major^2-semi.minor^2}/{semi.major^2}}}
+\deqn{\sqrt{\frac{semi.major^2-semi.minor^2}/{semi.major^2}}
   }
 }
 \references{
