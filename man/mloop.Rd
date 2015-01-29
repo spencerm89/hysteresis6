@@ -76,7 +76,7 @@ instead of just odd numbered n. Default is false.
 \details{
 Simulates input and output variables x and y that form a hysteresis loop of the form \deqn{x_t=b.x*cos(2pi*t/period+phase.angle)+cx+e_{x,t}} \deqn{y_t=b.y*cos(2pi*t/period+phase.angle)^n+retention*sin(2pi*t/period+phase.angle)^m
                     +cy+e_{y,t}} 
-          where \deqn{t=0,...,n.points-1} assuming times='equal' and the error terms e are normally distributed. Also produces a vector of derived parameter values. See \code{\link{loop.parameters}}.}
+          where \deqn{t=0,...,(n.points-1)} assuming times='equal' and the error terms e are normally distributed. Also produces a vector of derived parameter values. See \code{\link{loop.parameters}}.}
 \value{
 mloop returns an object of class \code{hysteresisloop}.
   \item{values}{estimated values of various coefficients and derived parameters of the hysteresis loop. See \code{\link{loop.parameters}} }
