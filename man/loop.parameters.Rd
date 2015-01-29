@@ -13,15 +13,7 @@ If \code{floop2r} is used a number of these parameters have differing values abo
 }
 
 \value{ 
-Specified loop parameters. 
-  \item{n}{ 
-    Positive integer for the split line parameter. If n=1, split line is linear; If n is even, split line has a u shape; If n is odd and higher than 1, split line has a chair or classical shape. 
- } 
- \item{m}{ 
-    Positive odd integer for the bulging parameter, indicates degree of outward curving (1=highest level of bulging). 
- } 
- 
-Inherent Parameters
+Specified loop Parameters
   \item{cx}{
 center of input x.
 }
@@ -29,15 +21,12 @@ center of input x.
 defines the starting point of the loop. The initial angle of the input function at its origin.
 }
   \item{n}{ 
- Positive  
- integer which determines shape of split line,"plateau" parameter. If n=1, split line is linear; If n is even, split line has concave (u-shape);  
+ Positive integer which determines shape of split line,"plateau" parameter. If n=1, split line is linear; If n is even, split line has concave (u-shape);  
 If n is odd and higher than 1, split line has sigmoidal (chair shape). A larger n extends length where derivative is zero (seat of chair).
 }
   \item{m}{ 
- Positive 
  Positive odd integer called "bulging" parameter, indicates degree of outward curving. The bulge around split line decreases as m increases.  
 }
-
 Inherent Parameters
   \item{cx}{
 center of input x.
@@ -56,7 +45,6 @@ saturation point y coordinate. Vertical distance from the center to the point wh
   \item{retention}{
 split point, representing vertical distance from center to upper loop trajectory. It is the intersection of the loop and the output axis characterizing the distortion in the response at the average input challenge.
 }
-
 Derived Hysteresis Parameters
   \item{coercion}{
 the horizontal distance of the input from the center. It indicates the strain the forcing function places on the output. It is the positive root of intersection between the loop and input axis.
@@ -97,8 +85,7 @@ input x and output y distances of focus points from center.
   }
    \item{eccentricity}{
 Measure of deviation from circle. Zero indicates no deviation from circle.
-\deqn{\sqrt{\fac{(semi.major^2-semi.minor^2)}{semi.major^2}}}
- \deqn{\sqrt {{{\semi.major^2 - \lambda _2^2} \over {\lambda _1^2}}}}
+ \deqn{\sqrt {{{semi.major^2 - semi.minor^2} \over {semi.major^2}}}}
   }
 }
 \references{
