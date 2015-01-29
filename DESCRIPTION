@@ -10,7 +10,7 @@ Depends:
 Suggests:
     knitr
 VignetteBuilder: knitr
-Description: Fit, summarize and plot sinusoidal hysteretic processes using:
+Description: Fit ellipse or hysteresis loop, summarize and plot sinusoidal hysteretic process using:
     two-step simple harmonic least squares, ellipse-specific non-linear least
     squares, the direct method, geometric least squares or linear least squares.
 License: GPL (>= 2)
