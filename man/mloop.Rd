@@ -18,10 +18,11 @@ mloop2r(cx=0,cy=0,retention.above=0.2,retention.below=0.15,b.x=0.6,b.y=0.8,n=1,m
 
 \arguments{
   \item{n}{
-Positive integer for the split line parameter. If n=1, split line is linear; If n is even, split line has a u shape; If n is odd and higher than 1, split line has a chair or classical shape.
+Positive integer which determines shape of split line,"plateau" parameter. If n=1, split line is linear; If n is even, split line has concave (u-shape); 
+If n is odd and higher than 1, split line has sigmoidal (chair shape).A larger n extends length where derivative is zero (seat of chair)
 }
   \item{m}{
-Positive odd integer for the bulging parameter, indicates degree of outward curving (1=highest level of bulging). 
+Positive odd integer called "bulging" parameter, indicates degree of outward curving. The bulge around split line decreases as m increases. 
 }
   \item{b.x}{
 number. Saturation point x coordinate. Horizontal distance from the center to the maximum value of the input challenge.
@@ -61,17 +62,21 @@ number of points on loop.
 number of equally spaced points required to make a full loop.
 }
   \item{extended.classical}{
-logical. If true, fit a classical hysteresis loop regardless of n. Uses \deqn{y_t=sign(cos(2*pi*t/period))*b.y*abs(cos(2*pi*t/period))^n + retention*sin(2*pi*t/period)^m+cy+e_{y,t}} instead of 
+logical. If true, fit a classical hysteresis loop regardless of n. Uses \deqn{y_t=sign(cos(2*pi*t/period))*b.y*abs(cos(2*pi*t/period))^n + retention*sin(2*pi*t/period)^m
+   +cy+e_{y,t}} 
+instead of 
 \deqn{y_t=b.y*cos(2*pi*t/period)^n+retention*sin(2*pi*t/period)^m+cy+e_{y,t}}
-Allows the user to fit classical loops with any n>1 instead of just odd numbered n. Default is false.
+Allows the user to fit classical loops with any n>1 
+instead of just odd numbered n. Default is false.
 }
   \item{seed}{ 
- integer, the starting seed. 
+ integer, the starting seed for random number generater. 
 } 
 }
 \details{
-Simulates input and output variables x and y that form a hysteresis loop of the form \deqn{x_t=b.x*cos(2pi*t/period+phase.angle)+cx+e_{x,t}} \deqn{y_t=b.y*cos(2pi*t/period+phase.angle)^n+retention*sin(2pi*t/period+phase.angle)^m+cy+e_{y,t}} 
-          where \deqn{t=0,...,n.points-1 if times='equal'} and the error terms e are normally distributed. Also produces a vector of derived values.}
+Simulates input and output variables x and y that form a hysteresis loop of the form \deqn{x_t=b.x*cos(2pi*t/period+phase.angle)+cx+e_{x,t}} \deqn{y_t=b.y*cos(2pi*t/period+phase.angle)^n+retention*sin(2pi*t/period+phase.angle)^m
+                    +cy+e_{y,t}} 
+          where \deqn{t=0,...,n.points-1} assuming times='equal' and the error terms e are normally distributed. Also produces a vector of derived values.}
 \value{
 mloop returns an object of class \code{hysteresisloop}.
   \item{values}{estimated values of various coefficients and derived parameters of the hysteresis loop. See \code{\link{loop.parameters}}}
