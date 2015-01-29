@@ -28,8 +28,6 @@ center of input x.
 \item{phase.angle}{
 defines the starting point of the loop. The initial angle of the input function at its origin.
 }
-
- Specified loop parameters. 
   \item{n}{ 
  Positive  
  integer which determines shape of split line,"plateau" parameter. If n=1, split line is linear; If n is even, split line has concave (u-shape);  
@@ -100,6 +98,7 @@ input x and output y distances of focus points from center.
    \item{eccentricity}{
 Measure of deviation from circle. Zero indicates no deviation from circle.
 \deqn{\sqrt{\fac{(semi.major^2-semi.minor^2)}{semi.major^2}}}
+ \deqn{\sqrt {{{\semi.major^2 - \lambda _2^2} \over {\lambda _1^2}}}}
   }
 }
 \references{
