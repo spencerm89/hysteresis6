@@ -26,7 +26,7 @@ Inherent Parameters
 center of input x.
 }
 \item{phase.angle}{
-defines the starting point of the loop. The initial angle of the input function at its origin.}
+defines the starting point of the loop. The initial angle of the input function at its origin.
 }
 
  Specified loop parameters. 
