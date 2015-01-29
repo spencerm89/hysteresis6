@@ -14,14 +14,8 @@ If \code{floop2r} is used a number of these parameters have differing values abo
 
 \value{ 
 Specified loop Parameters
-  \item{cx}{
-center of input x.
-}
-\item{phase.angle}{
-defines the starting point of the loop. The initial angle of the input function at its origin.
-}
   \item{n}{ 
- Positive integer which determines shape of split line,"plateau" parameter. If n=1, split line is linear; If n is even, split line has concave (u-shape);  
+Positive integer which determines shape of split line,"plateau" parameter. If n=1, split line is linear; If n is even, split line has concave (u-shape);  
 If n is odd and higher than 1, split line has sigmoidal (chair shape). A larger n extends length where derivative is zero (seat of chair).
 }
   \item{m}{ 
@@ -54,16 +48,16 @@ lag indicates the delay between attributes of the output and the input (such as 
 }
   \item{area}{
   the area of the hysteresis loop. Can indicate the work done during one cycle or period.
-  }
+}
   \item{split.angle}{
   beta, the angle between the tangent to the un-split curve at the center and the input axis.
-  }
+}
   \item{hysteresis.x}{
   hysteresis along the input axis. The proportion of coercion due to input saturation b.x.
-  }
+}
   \item{hysteresis.y}{
   hysteresis along the output axis. The proportion of retention due to b.y.
- }
+}
 Ellipse Parameters
  \item{ampx}{
  Amplitude of the input, equal to b.x.
