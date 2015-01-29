@@ -67,8 +67,9 @@ If method="harmonic2" (which is always the case if this is a \code{fittedloop} o
      and \code{residuals.ellipsefit} replaces these with the geometric residuals.
 
 Studentization for the \code{rstudent} function is performed as if method="harmonic2" regardless of the method used for fitting the ellipse/loop. Therefore, unless method="harmonic2" and no bootstrapping is performed, 
-   these are pseudo-studentized residuals, not true studentized residuals. This is internal scaling studentization. Studentization for bootstrapping in the functions \code{\link{summary.ellipsefit}}/\code{\link{summary.fittedloop}} 
-   differs from the studentization performed by \code{rstudent} in that it only accounts for the influence matrix and does not divide by the standard deviation. 
+    these are pseudo-studentized residuals, not true studentized residuals. This is internal scaling studentization. Studentization for bootstrapping in the functions
+    \code{\link{summary.ellipsefit}}/\code{\link{summary.fittedloop}} differs from the studentization performed by \code{rstudent} in that it only accounts for the influence matrix and 
+    does not divide by the standard deviation. 
 }
 \value{
   \item{input}{a numeric vector. Observed input - fitted input for residuals.}
