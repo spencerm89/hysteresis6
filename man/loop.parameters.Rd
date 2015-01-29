@@ -20,10 +20,12 @@ Positive integer for the split line parameter. If n=1, split line is linear; If 
  \item{m}{ 
 Positive odd integer for the bulging parameter, indicates degree of outward curving (1=highest level of bulging). 
  } 
+ 
 Inherent Parameters
   \item{cx}{
 center of input x.
 }
+
  Specified loop parameters. 
   \item{n}{ 
  Positive  
@@ -34,6 +36,7 @@ If n is odd and higher than 1, split line has sigmoidal (chair shape). A larger 
  Positive 
  Positive odd integer called "bulging" parameter, indicates degree of outward curving. The bulge around split line decreases as m increases.  
 }
+
 Inherent Parameters
   \item{cx}{
 center of input x.
@@ -93,7 +96,7 @@ input x and output y distances of focus points from center.
   }
    \item{eccentricity}{
 Measure of deviation from circle. Zero indicates no deviation from circle.
-\deqn{\sqrt{\frac{semi.major^2-semi.minor^2}/{semi.major^2}}}
+\deqn{\sqrt{(semi.major^2-semi.minor^2)/semi.major^2}}
   }
 }
 \references{
