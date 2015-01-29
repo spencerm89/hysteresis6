@@ -9,35 +9,35 @@ Inherent and Derived Parameter Definitions for Hysteresis Loops/Ellipses
 \code{\link{floop}} returns a \code{fittedloop} object and calculates a variety of hysteresis loop parameters. This is a list of definitions for these parameters, as well as some only available for ellipses through \code{\link{fel}}. 
 If \code{floop2r} is used a number of these parameters have differing values above and below the split line. The generalized transcendental equations used to fit these loops are
 \deqn{x_t=b.x*cos(2pi*t/period+phase.angle)+cx+e_{x,t}} \deqn{y_t=b.y*cos(2pi*t/period+phase.angle)^n+retention*sin(2pi*t/period+phase.angle)^m+cy+e_{y,t}}  where
-\{deqn{t=0,...,n.points-1} if times='equal'}
+(\deqn{t=0,...,n.points-1} if times='equal')
 }
 
 \value{
 Specified loop parameters.
   \item{n}{
-Positive integer which determines shape of split line,"plateau" parameter. If n=1, split line is linear; If n is even, split line has concave (u-shape);  
-If n is odd and higher than 1, split line has sigmoidal (chair shape). A larger n extends length where derivative is zero (seat of chair).  
+  Positive integer which determines shape of split line,"plateau" parameter. If n=1, split line is linear; If n is even, split line has concave (u-shape);  
+  If n is odd and higher than 1, split line has sigmoidal (chair shape). A larger n extends length where derivative is zero (seat of chair).  
 }
   \item{m}{
-Positive odd integer called "bulging" parameter, indicates degree of outward curving. The bulge around split line decreases as m increases.  
+  Positive odd integer called "bulging" parameter, indicates degree of outward curving. The bulge around split line decreases as m increases.  
 }
 Inherent Parameters
   \item{cx}{
-center of input x.
+  center of input x.
 }
   \item{cy}{
-center of output y.
+  center of output y.
 }
   \item{phase.angle}{
-defines the starting point of the loop. The initial angle of the input function at its origin.}
+  defines the starting point of the loop. The initial angle of the input function at its origin.}
  \item{b.x}{
-saturation point x coordinate. Horizontal distance from the center to the maximum value of the input.
+ saturation point x coordinate. Horizontal distance from the center to the maximum value of the input.
 }
   \item{b.y}{
-saturation point y coordinate. Vertical distance from the center to the point where the input is at its maximum.
+  saturation point y coordinate. Vertical distance from the center to the point where the input is at its maximum.
 } 
   \item{retention}{
-split point, representing vertical distance from center to upper loop trajectory. It is the intersection of the loop and the output axis characterizing the distortion in the response at the average input challenge.
+  split point, representing vertical distance from center to upper loop trajectory. It is the intersection of the loop and the output axis characterizing the distortion in the response at the average input challenge.
 }
 
 Derived Hysteresis Parameters
@@ -80,7 +80,7 @@ input x and output y distances of focus points from center.
   }
    \item{eccentricity}{
 Measure of deviation from circle. Zero indicates no deviation from circle.
-\deqn{\sqrt{\frac{semi.major^2-semi.minor^2}{semi.major^2}}}
+\deqn{sqrt{frac{semi.major^2-semi.minor^2}\{semi.major^2}}}
   }
 }
 \references{
@@ -90,7 +90,8 @@ Lapshin, R. (1995) Analytical model for the approximation of hysteresis loop and
 Spencer Maynes, Fan Yang, and Anne Parkhurst.
 }
 \seealso{
-\code{\link{mloop}} for simulating a hysteresis loop and \code{\link{floop}} for fitting a hysteresis loop. 
+\code{\link{mloop}} for simulating a hysteresis loop and \code{\link{floop}} for fitting a hysteresis loop.
+\
 \code{\link{mel}} for simulating an ellipse and \code{\link{fel}} for fitting an ellipse. 
 }
 \examples{
